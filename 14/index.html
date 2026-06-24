@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокировщик сайтов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1> Блокировщик сайтов</h1>
+        
+        <!-- Форма -->
+        <div class="form">
+            <div class="form-row">
+                <div class="field">
+                    <label for="siteUrl">Сайт:</label>
+                    <input type="text" id="siteUrl" placeholder="youtube.com">
+                    <div class="hint">Без http:// и https://</div>
+                </div>
+                <div class="field">
+                    <label for="blockTime">Время блокировки (минуты):</label>
+                    <input type="number" id="blockTime" placeholder="30" min="1" value="30">
+                </div>
+            </div>
+            
+            <button id="addBtn"> Добавить сайт</button>
+        </div>
+
+        <!-- Список заблокированных -->
+        <div class="blocked-list">
+            <h2>Заблокированные сайты</h2>
+            <div id="sitesContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
